@@ -1,7 +1,0 @@
-<launch>
-  <include file="$(find base_control)/launch/base_control.launch" 
-
-  <node pkg="eprobot_start" name="draw_line" type="show_path.py" output="screen"/>
-
-  <node pkg="eprobot_start" name="draw_line" type="draw_line.py" output="screen"/>
-</launch>

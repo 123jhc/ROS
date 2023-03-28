@@ -1,4 +1,0 @@
-<launch>
-<include file="$(find eprobot_start)/launch/EPRobot_start.launch"/>
-<node pkg="eprobot_start" name="draw_circle" type="draw_circle.py" output="screen"/>
-</launch>
