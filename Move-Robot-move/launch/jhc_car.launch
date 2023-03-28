@@ -1,0 +1,7 @@
+<launch>
+    <!-- 小车启动节点 -->
+    <include  file="$(find base_control)/launch/base_control.launch" />
+   
+    <!-- 运动节点 -->
+    <node name="move" pkg="jhc" type="ros.py" output="screen"/>
+</launch>

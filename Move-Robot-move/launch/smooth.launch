@@ -1,0 +1,9 @@
+<launch>
+    <!-- 小车启动节点 -->
+    <include  file="$(find base_control)/launch/base_control.launch" />
+     <!-- 平滑处理启动节点 -->
+    <include  file="$(find yocs_velocity_smoother)/launch/standalone.launch" /> 
+    <remap from="/cmd_vel" to="/smooth_cmd_vel" />
+    <!-- 运动节点 -->
+    <node name="move" pkg="jhc" type="ros.py" output="screen"/>
+</launch>

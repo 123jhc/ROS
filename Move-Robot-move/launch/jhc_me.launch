@@ -1,0 +1,9 @@
+<launch>
+    <!-- 小车启动节点 -->
+    <!-- <include  file="$(find mbot_gazebo)/launch/view_mbot_gazebo_empty_world.launch" />  -->
+    <include  file="$(find mbot_description)/launch/xacro/arbotix_mbot_with_camera_xacro.launch" />
+    <!-- Path话题启动 -->
+    <node name="path" pkg="jhc" type="show_path.py"/>
+    <!-- 运动节点 -->
+    <node name="move" pkg="jhc" type="ros.py" output="screen"/>
+</launch>
